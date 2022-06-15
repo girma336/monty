@@ -85,3 +85,26 @@ void mod(stack_t **stack, unsigned int lineNum)
 	delet_at_idx(stack, 0);
 }
 
+/**
+ *pchar-print the char the top of the element
+ *@stack:pointer
+ *@lineNum:line number
+ */
+
+void pchar(stack_t **stack, unsigned int lineNum)
+{
+	if (!(*stack))
+	{
+		fprintf(stderr, "L%u: can't pchar, stack empty\n", lineNum);
+		cleaner();
+		exit(EXIT_FAILURE);
+	}
+	if ((*stack)->n < 0 || (*stack)->n > 127)
+	{
+		fprintf(stderr, "L%u: can't pchar, value out of range\n", lineNum);
+		cleaner();
+		exit(EXIT_FAILURE);
+	}
+	printf("%c\n", (*stack)->n);
+}
+

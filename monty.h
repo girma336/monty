@@ -87,6 +87,7 @@ void sub(stack_t **stack, unsigned int lineNum);
 void div_n(stack_t **stack, unsigned int lineNum);
 void mul(stack_t **stack, unsigned int lineNum);
 void mod(stack_t **stack, unsigned int lineNum);
+void pchar(stack_t **stack, unsigned int lineNum);
 
 extern args_t args;
 #endif
