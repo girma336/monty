@@ -47,7 +47,7 @@ void caller(void)
 {
 	instruction_t code[] = {
 		{"push", push}, {"mul", mul},
-		{"pall", pall},
+		{"pall", pall}, {"mod", mod},
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
