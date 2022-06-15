@@ -34,7 +34,7 @@ void div_n(stack_t **stack, unsigned int lineNum)
 	}
 	if ((*stack)->n == 0)
 	{
-		fprintf(stderr, "L%u: can't division by zero\n", lineNum);
+		fprintf(stderr, "L%u: division by zero\n", lineNum);
 		cleaner();
 		exit(EXIT_FAILURE);
 	}
