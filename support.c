@@ -52,7 +52,7 @@ void caller(void)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
-		{"nop", nop},
+		{"nop", nop}, {"sub", sub},
 		{NULL, NULL}};
 
 	int i = 0;
