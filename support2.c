@@ -43,3 +43,20 @@ size_t print_list(const stack_t *head)
 	}
 	return (node);
 }
+
+/**
+ *pint-print the value
+ *@stack:pointre
+ *@lineNum:line number
+ */
+
+void pint(stack_t **stack, unsigned int lineNum)
+{
+	if (*stack == NULL)
+	{
+		fprintf(stderr, "L%u: can't pint, stack empty\n", lineNum);
+		cleaner();
+		exit(EXIT_FAILURE);
+	}
+	printf("%d\n", (*stack)->n);
+}

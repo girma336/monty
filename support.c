@@ -48,6 +48,7 @@ void caller(void)
 	instruction_t code[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL}};
 
 	int i = 0;
