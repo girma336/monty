@@ -46,9 +46,9 @@ void pall(stack_t **stack, unsigned int lineNum)
 
 void swap(stack_t **stack, unsigned int lineNum)
 {
-	int temp;
+	register int temp;
 
-	if (*stack == NULL)
+	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%u: can't swap, stack too short\n", lineNum);
 		cleaner();
