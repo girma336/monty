@@ -56,6 +56,7 @@ typedef struct arguments
 void pall(stack_t **stack, unsigned int lineNum);
 void push(stack_t **stack, unsigned int lineNum);
 void pint(stack_t **stack, unsigned int lineNum); 
+void pop(stack_t **stack, unsigned int lineNum);
 void queue(stack_t **stack, __attribute__((unused)) unsigned int lineNum);
 void stack(stack_t **stack, unsigned int lineNum);
 size_t print_list(const stack_t *head);

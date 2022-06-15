@@ -60,3 +60,21 @@ void pint(stack_t **stack, unsigned int lineNum)
 	}
 	printf("%d\n", (*stack)->n);
 }
+
+/**
+ *pop-remove the top of element
+ *@stack:pointer
+ *@lineNum:number of line
+ */
+
+void pop(stack_t **stack, unsigned int lineNum)
+{
+	if (*stack == NULL)
+	{
+		fprintf(stderr, "L%u: can't pop an empty stack\n", lineNum);
+		cleaner();
+		exit(EXIT_FAILURE);
+	}
+	else
+		delet_at_idx(stack, 0);
+}
