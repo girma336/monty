@@ -1,15 +1,13 @@
 #include "monty.h"
-
 args_t args;
-
 /**
- *main:mainfunction of the code
+ *main-mainfunction of the code
  *@ac:number of argument
  *@av:array of srgs
- *Return:success on exit 
+ *Return:success on exit
  */
 
-int main(int ac, char**av)
+int main(int ac, char **av)
 {
 	if (ac != 2)
 	{

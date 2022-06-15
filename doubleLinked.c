@@ -3,7 +3,8 @@
 /**
  *delet_at_idx-delete the node at the end of node
  *@head:First node of the list
- *@ind:index number
+ *@idx:index number
+ *Return: 1 if the scu
  */
 
 int delet_at_idx(stack_t **head, unsigned int idx)
@@ -30,8 +31,7 @@ int delet_at_idx(stack_t **head, unsigned int idx)
 	}
 	if (size < idx + 1)
 		return (-1);
-
-	while(i < idx)
+	while (i < idx)
 	{
 		temp = temp->next;
 		i++;
@@ -47,7 +47,6 @@ int delet_at_idx(stack_t **head, unsigned int idx)
  *free_list-remove the list you can want
  *@head:pointer of the list
  */
-
 
 void free_list(stack_t *head)
 {
@@ -71,9 +70,9 @@ void free_list(stack_t *head)
 size_t list_size(stack_t *head)
 {
 	size_t node;
-	node = 0;
 
-	while(head)
+	node = 0;
+	while (head)
 	{
 		printf("%d\n", head->n);
 		head = head->next;
@@ -88,6 +87,7 @@ size_t list_size(stack_t *head)
  *add_node_first-add the new node at the first
  *@head:firat node pointer
  *@num:New node data
+ *Return:node
  */
 
 
@@ -119,6 +119,7 @@ stack_t *add_node_first(stack_t **head, const int num)
  *add_at_end-add new node at the end of list
  *@head:head of the node
  *@num: new data tha can be inserted to ne node
+ *Return:node
  */
 
 stack_t *add_at_end(stack_t **head, const int num)

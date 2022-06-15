@@ -2,7 +2,7 @@
 
 /**
  *stack-add data top of stack
- *@stack- pointer
+ *@stack:pointer
  *@lineNum: find lin
  */
 
@@ -28,6 +28,7 @@ void queue(stack_t **stack, __attribute__((unused)) unsigned int lineNum)
 /**
  *print_list-print list of node
  *@head:pointer of node
+ *Return:node
  */
 
 size_t print_list(const stack_t *head)

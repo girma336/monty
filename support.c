@@ -12,7 +12,9 @@ void cleaner(void)
 		fclose(args.file);
 	}
 }
-
+/**
+ *monty-getline function
+ */
 void monty(void)
 {
 	char line[128];

@@ -2,7 +2,7 @@
 
 /**
  *check_string-check the input string or not
- *@s:input value
+ *@str:input value
  *Return:0 or 1
  */
 
@@ -14,7 +14,7 @@ int check_string(char *str)
 		return (-1);
 	if (*str == '-')
 		str++;
-	while(str[idx])
+	while (str[idx])
 	{
 		if (str[idx] >= '0' && str[idx] <= '9')
 			idx++;

@@ -3,7 +3,7 @@
 /**
  *push-add data at top of the stack
  *@stack:pointer of the node
- *@linNum:the nember of line can be given
+ *@lineNum:the nember of line can be given
  */
 
 void push(stack_t **stack, unsigned int lineNum)
@@ -13,7 +13,7 @@ void push(stack_t **stack, unsigned int lineNum)
 
 	if (check_string(gir) == -1)
 	{
-		fprintf(stderr, "L%u: usage push integer \n", lineNum);
+		fprintf(stderr, "L%u: usage: push integer \n", lineNum);
 		cleaner();
 		exit(EXIT_FAILURE);
 	}
@@ -23,9 +23,14 @@ void push(stack_t **stack, unsigned int lineNum)
 	{
 		add_node_first(stack, num);
 	}
-	else 
+	else
 		add_at_end(stack, num);
 }
+/**
+ *pall-print the stack
+ *@stack:pointer
+ *@lineNum:line nume
+ */
 
 void pall(stack_t **stack, unsigned int lineNum)
 {
