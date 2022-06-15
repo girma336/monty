@@ -51,6 +51,8 @@ typedef struct arguments
 	FILE *file;
 	int order;
 } args_t;
+/** main .c*/
+void nop(stack_t **stack, unsigned int lineNnm);
 
 /* support*/
 void pall(stack_t **stack, unsigned int lineNum);
@@ -60,12 +62,15 @@ void pop(stack_t **stack, unsigned int lineNum);
 void queue(stack_t **stack, __attribute__((unused)) unsigned int lineNum);
 
 /*stack and queue*/
+
 void stack(stack_t **stack, unsigned int lineNum);
 size_t print_list(const stack_t *head);
 int check_string(char *str);
 void swap(stack_t **stack, unsigned int lineNum);
 void add(stack_t **stack, unsigned int lineNum);
+
 /* doublelinked list*/
+
 int delet_at_idx(stack_t **head, unsigned int idx);
 void free_list(stack_t *head);
 size_t list_size(stack_t *head);

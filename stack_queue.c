@@ -75,3 +75,15 @@ void add(stack_t **stack, unsigned int lineNum)
 	(*stack)->next->n += (*stack)->n;
 	delet_at_idx(stack, 0);
 }
+
+/**
+ *nop-no change
+ *@stack:pointer
+ *@lineNum:
+ */
+
+void nop(stack_t **stack, unsigned int lineNum)
+{
+	(void)lineNum;
+	(void)stack;
+}
