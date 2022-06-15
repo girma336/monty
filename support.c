@@ -49,7 +49,7 @@ void caller(void)
 		{"push", push}, {"mul", mul},
 		{"pall", pall}, {"mod", mod},
 		{"pint", pint}, {"pchar", pchar},
-		{"pop", pop},
+		{"pop", pop}, {"pstr", pstr},
 		{"swap", swap},
 		{"add", add}, {"div", div_n},
 		{"nop", nop}, {"sub", sub},
@@ -74,4 +74,22 @@ void caller(void)
 	fprintf(stderr, "L%ld: unknown instruction %s\n", args.count, magic);
 	cleaner();
 	exit(EXIT_FAILURE);
+}
+
+/**
+ *pstr-printin string form
+ *@stack:pointer
+ *@lineNum:line number
+ */
+
+void pstr(stack_t **stack, unsigned int lineNum)
+{
+	stack_t *temp = *stack;
+	(void)lineNum;
+	while (temp && (temp->n > 0 && temp->n <= 127))
+	{
+		printf("%c", temp->n);
+		temp = temp->next;
+	}
+	printf("\n");
 }

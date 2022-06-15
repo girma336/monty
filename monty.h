@@ -81,6 +81,7 @@ stack_t *add_at_end(stack_t **head, const int num);
 void cleaner(void);
 void monty(void);
 void caller(void);
+void pstr(stack_t **stack, unsigned int lineNum);
 
 /* math_operation*/
 void sub(stack_t **stack, unsigned int lineNum);
