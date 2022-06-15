@@ -52,15 +52,20 @@ typedef struct arguments
 	int order;
 } args_t;
 
-/* stack and queue*/
+/* support*/
 void pall(stack_t **stack, unsigned int lineNum);
 void push(stack_t **stack, unsigned int lineNum);
 void pint(stack_t **stack, unsigned int lineNum); 
 void pop(stack_t **stack, unsigned int lineNum);
 void queue(stack_t **stack, __attribute__((unused)) unsigned int lineNum);
+
+/*stack and queue*/
 void stack(stack_t **stack, unsigned int lineNum);
 size_t print_list(const stack_t *head);
 int check_string(char *str);
+void swap(stack_t **stack, unsigned int lineNum);
+
+
 /* doublelinked list*/
 int delet_at_idx(stack_t **head, unsigned int idx);
 void free_list(stack_t *head);

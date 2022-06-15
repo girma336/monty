@@ -37,3 +37,25 @@ void pall(stack_t **stack, unsigned int lineNum)
 	(void)lineNum;
 	print_list(*stack);
 }
+
+/**
+ *swap- swaps the top two elemwnt of the stack
+ *@stack:pointer
+ *@lineNum:line number
+ */
+
+void swap(stack_t **stack, unsigned int lineNum)
+{
+	int temp;
+
+	if (*stack == NULL)
+	{
+		fprintf(stderr, "L%u: can't swap, stack too short\n", lineNum);
+		cleaner();
+		exit(EXIT_FAILURE);
+	}
+	temp = (*stack)->n;
+	(*stack)->n = (*stack)->next->n;
+	(*stack)->next->n = temp;
+}
+
