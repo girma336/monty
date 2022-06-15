@@ -28,7 +28,7 @@ void div_n(stack_t **stack, unsigned int lineNum)
 {
 	if (!(*stack) || !(*stack)->next)
 	{
-		fprintf(stderr, "L%u: can't div, stack\n", lineNum);
+		fprintf(stderr, "L%u: can't div, stack too short\n", lineNum);
 		cleaner();
 		exit(EXIT_FAILURE);
 	}
