@@ -51,7 +51,7 @@ void caller(void)
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
-		{"add", add},
+		{"add", add}, {"div", div_n},
 		{"nop", nop}, {"sub", sub},
 		{NULL, NULL}};
 
