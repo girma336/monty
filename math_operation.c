@@ -93,7 +93,7 @@ void mod(stack_t **stack, unsigned int lineNum)
 
 void pchar(stack_t **stack, unsigned int lineNum)
 {
-	if (!(*stack))
+	if (!(*stack) || stack == NULL)
 	{
 		fprintf(stderr, "L%u: can't pchar, stack empty\n", lineNum);
 		cleaner();
