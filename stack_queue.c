@@ -58,4 +58,20 @@ void swap(stack_t **stack, unsigned int lineNum)
 	(*stack)->n = (*stack)->next->n;
 	(*stack)->next->n = temp;
 }
+/**
+ *add- add the top two elemwnt of the stack
+ *@stack:pointer
+ *@lineNum:line number
+ */
 
+void add(stack_t **stack, unsigned int lineNum)
+{
+	if (!(*stack) || !(*stack)->next)
+	{
+		fprintf(stderr, "L%u: can't add, stack too short\n", lineNum);
+		cleaner();
+		exit(EXIT_FAILURE);
+	}
+	(*stack)->next->n += (*stack)->n;
+	delet_at_idx(stack, 0);
+}

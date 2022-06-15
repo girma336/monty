@@ -64,8 +64,7 @@ void stack(stack_t **stack, unsigned int lineNum);
 size_t print_list(const stack_t *head);
 int check_string(char *str);
 void swap(stack_t **stack, unsigned int lineNum);
-
-
+void add(stack_t **stack, unsigned int lineNum);
 /* doublelinked list*/
 int delet_at_idx(stack_t **head, unsigned int idx);
 void free_list(stack_t *head);
