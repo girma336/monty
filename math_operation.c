@@ -41,3 +41,21 @@ void div_n(stack_t **stack, unsigned int lineNum)
 	(*stack)->next->n /= (*stack)->n;
 	delet_at_idx(stack, 0);
 }
+
+/**
+ *mul-divide the top of the element
+ *@stack:pointer
+ *@lineNum:line number
+ */
+void mul(stack_t **stack, unsigned int lineNum)
+{
+	if (!*stack || !(*stack)->next)
+	{
+		fprintf(stderr, "L%u: can't mul, stack too short\n", lineNum);
+		cleaner();
+		exit(EXIT_FAILURE);
+	}
+	(*stack)->next->n *= (*stack)->n;
+	delet_at_idx(stack, 0);
+}
+

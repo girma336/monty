@@ -85,8 +85,8 @@ void caller(void);
 /* math_operation*/
 void sub(stack_t **stack, unsigned int lineNum);
 void div_n(stack_t **stack, unsigned int lineNum);
-/*void mul(stack_t **stack, unsigned int listNum);
- *void mod(stack_t **stack, unsigned int listNum);
+void mul(stack_t **stack, unsigned int lineNum);
+/*void mod(stack_t **stack, unsigned int listNum);
  */
 
 extern args_t args;

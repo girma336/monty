@@ -46,7 +46,7 @@ void monty(void)
 void caller(void)
 {
 	instruction_t code[] = {
-		{"push", push},
+		{"push", push}, {"mul", mul},
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},
