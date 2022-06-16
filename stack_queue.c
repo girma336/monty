@@ -79,7 +79,7 @@ void add(stack_t **stack, unsigned int lineNum)
 /**
  *nop-no change
  *@stack:pointer
- *@lineNum:
+ *@lineNum:number
  */
 
 void nop(stack_t **stack, unsigned int lineNum)

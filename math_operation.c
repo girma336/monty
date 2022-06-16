@@ -56,7 +56,6 @@ void mul(stack_t **stack, unsigned int lineNum)
 		exit(EXIT_FAILURE);
 	}
 	(*stack)->next->n *= (*stack)->n;
-	
 	delet_at_idx(stack, 0);
 }
 
@@ -74,7 +73,6 @@ void mod(stack_t **stack, unsigned int lineNum)
 		cleaner();
 		exit(EXIT_FAILURE);
 	}
-	
 	if ((*stack)->n == 0)
 	{
 		fprintf(stderr, "L%u: division by zero\n", lineNum);

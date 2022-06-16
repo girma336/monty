@@ -23,3 +23,21 @@ int check_string(char *str)
 	}
 	return (1);
 }
+
+/**
+ *pstr-printin string form
+ *@stack:pointer
+ *@lineNum:line number
+ */
+
+void pstr(stack_t **stack, unsigned int lineNum)
+{
+	stack_t *temp = *stack;
+	(void)lineNum;
+	while (temp && (temp->n > 0 && temp->n <= 127))
+	{
+		printf("%c", temp->n);
+		temp = temp->next;
+	}
+	printf("\n");
+}
