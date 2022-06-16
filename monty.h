@@ -90,5 +90,9 @@ void mul(stack_t **stack, unsigned int lineNum);
 void mod(stack_t **stack, unsigned int lineNum);
 void pchar(stack_t **stack, unsigned int lineNum);
 
+/*string man*/
+void rotl(stack_t **stack, unsigned int lineNum);
+
+
 extern args_t args;
 #endif

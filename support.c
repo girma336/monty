@@ -50,7 +50,7 @@ void caller(void)
 		{"pall", pall}, {"mod", mod},
 		{"pint", pint}, {"pchar", pchar},
 		{"pop", pop}, {"pstr", pstr},
-		{"swap", swap},
+		{"swap", swap}, {"rotl", rotl},
 		{"add", add}, {"div", div_n},
 		{"nop", nop}, {"sub", sub},
 		{NULL, NULL}};

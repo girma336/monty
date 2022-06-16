@@ -41,3 +41,19 @@ void pstr(stack_t **stack, unsigned int lineNum)
 	}
 	printf("\n");
 }
+
+/**
+ *rotl-rotates the stack to the top
+ *@stack:pointer
+ *@lineNum:line number
+ */
+
+void rotl(stack_t **stack, unsigned int lineNum)
+{
+	if ((*stack) && (*stack)->next)
+	{
+		add_at_end(stack, (*stack)->n);
+		delet_at_idx(stack, 0);
+	}
+	(void)lineNum;
+}
