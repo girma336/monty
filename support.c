@@ -53,6 +53,7 @@ void caller(void)
 		{"swap", swap}, {"rotl", rotl},
 		{"add", add}, {"div", div_n},
 		{"nop", nop}, {"sub", sub},
+		{"rolr", rotr},
 		{NULL, NULL}};
 
 	int i = 0;

@@ -92,7 +92,7 @@ void pchar(stack_t **stack, unsigned int lineNum);
 
 /*string man*/
 void rotl(stack_t **stack, unsigned int lineNum);
-
+void rotr(stack_t **stack, unsigned int lineNum);
 
 extern args_t args;
 #endif

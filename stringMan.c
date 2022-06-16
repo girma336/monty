@@ -49,13 +49,34 @@ void pstr(stack_t **stack, unsigned int lineNum)
  */
 
 void rotl(stack_t **stack, unsigned int lineNum)
-{
-	add_at_end(stack, (*stack)->n);
-	delet_at_idx(stack, 0);
+{	
+	if (*stack && (*stack)->next)
+	{
+		add_at_end(stack, (*stack)->n);
+		delet_at_idx(stack, 0);
+	}
 	(void)lineNum;
 }
 
 /**
  *rotr-rotates the stack to the bottom
- *@
+ *@stack:pointer
+ *@lineNum:line number
  */
+
+void rotr(stack_t **stack, unsigned int lineNum)
+{
+	register int i = 0;
+	stack_t *temp = *stack;
+	if (*stack && (*stack)->next)
+	{
+		while (temp->next)
+		{
+			temp = temp->next;
+			i++;
+		}
+		add_node_first(stack, (*stack)->n);
+		delet_at_idx(stack, i);
+	}
+	(void)lineNum;
+}	
