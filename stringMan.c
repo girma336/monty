@@ -66,17 +66,21 @@ void rotl(stack_t **stack, unsigned int lineNum)
 
 void rotr(stack_t **stack, unsigned int lineNum)
 {
-	register int i = 0;
+	register int i = 0, count = 0;
 	stack_t *temp = *stack;
 	if (*stack && (*stack)->next)
 	{
-		while (temp->next)
+		while (temp)
 		{
+			if (!temp->next)
+			{
+				i = temp->n;
+			}
 			temp = temp->next;
-			i++;
+			count++;
 		}
-		add_node_first(stack, (*stack)->n);
-		delet_at_idx(stack, i);
+		add_node_first(stack, i);
+		delet_at_idx(stack, count);
 	}
 	(void)lineNum;
 }	
