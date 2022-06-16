@@ -50,10 +50,12 @@ void pstr(stack_t **stack, unsigned int lineNum)
 
 void rotl(stack_t **stack, unsigned int lineNum)
 {
-	if ((*stack) && (*stack)->next)
-	{
-		add_at_end(stack, (*stack)->n);
-		delet_at_idx(stack, 0);
-	}
+	add_at_end(stack, (*stack)->n);
+	delet_at_idx(stack, 0);
 	(void)lineNum;
 }
+
+/**
+ *rotr-rotates the stack to the bottom
+ *@
+ */
