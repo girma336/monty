@@ -19,9 +19,10 @@ void stack(stack_t **stack, unsigned int lineNum)
  *@lineNum:line num
  */
 
-void queue(stack_t **stack, __attribute__((unused)) unsigned int lineNum)
+void queue(stack_t **stack, unsigned int lineNum)
 {
 	(void)stack;
+	(void)lineNum;
 	args.order = 0;
 }
 

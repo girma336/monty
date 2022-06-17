@@ -13,7 +13,7 @@ void push(stack_t **stack, unsigned int lineNum)
 
 	if (check_string(gir) == -1)
 	{
-		fprintf(stderr, "L%u: usage: push integer \n", lineNum);
+		fprintf(stderr, "L%u: usage: push integer\n", lineNum);
 		cleaner();
 		exit(EXIT_FAILURE);
 	}
