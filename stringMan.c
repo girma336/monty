@@ -19,7 +19,11 @@ int check_string(char *str)
 		if (str[idx] == ' ')
 			idx++;
 		else if (str[idx] >= '0' && str[idx] <= '9')
+		{
+			if (str[idx + 1] == ' ')
+				return (1);
 			idx++;
+		}
 		else
 			return (-1);
 	}
