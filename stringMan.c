@@ -16,7 +16,9 @@ int check_string(char *str)
 		str++;
 	while (str[idx])
 	{
-		if (str[idx] >= '0' && str[idx] <= '9')
+		if (str[idx] == ' ')
+			idx++;
+		else if (str[idx] >= '0' && str[idx] <= '9')
 			idx++;
 		else
 			return (-1);
