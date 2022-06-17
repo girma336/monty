@@ -49,7 +49,7 @@ void pstr(stack_t **stack, unsigned int lineNum)
  */
 
 void rotl(stack_t **stack, unsigned int lineNum)
-{	
+{
 	if (*stack && (*stack)->next)
 	{
 		add_at_end(stack, (*stack)->n);
@@ -68,6 +68,8 @@ void rotr(stack_t **stack, unsigned int lineNum)
 {
 	int count = 0;
 	stack_t *temp = *stack;
+
+
 	if (*stack && (*stack)->next)
 	{
 		while (temp->next)
@@ -79,4 +81,4 @@ void rotr(stack_t **stack, unsigned int lineNum)
 		delet_at_idx(stack, count);
 	}
 	(void)lineNum;
-}	
+}
