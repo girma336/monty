@@ -9,7 +9,7 @@
 void push(stack_t **stack, unsigned int lineNum)
 {
 	register int num;
-	char *gir = strtok(NULL, "\n");
+	char *gir = strtok(NULL, " \n");
 
 	if (check_string(gir) == -1)
 	{

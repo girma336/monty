@@ -12,7 +12,7 @@ int check_string(char *str)
 
 	if (str == NULL)
 		return (-1);
-	if (*str == '-')
+	else if (*str == '-')
 		str++;
 	while (str[idx])
 	{
@@ -22,12 +22,14 @@ int check_string(char *str)
 			return (1);
 		else if (str[idx] >= '0' && str[idx] <= '9')
 		{
-			if (str[idx + 1] == ' ')
+			if (str[idx + 1] == '\0')
 				return (1);
 			idx++;
 		}
 		else
+		{
 			return (-1);
+		}
 	}
 	return (1);
 }
@@ -86,7 +88,7 @@ void rotr(stack_t **stack, unsigned int lineNum)
 			count++;
 		}
 		add_node_first(stack, temp->n);
-		delet_at_idx(stack, count);
+		delet_at_idx(stack, count - 1);
 	}
 	(void)lineNum;
 }
